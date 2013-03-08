@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>handsome guys shakes hands well...</title>
+	<meta name="author" content="Cem Gencer">
+	<!-- Date: 2013-02-01 -->
+</head>
+<body>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="js/utils/jquery.base64.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/utils/store+json2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ruleBook.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/cuteNSexy.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	_this = this;
+	var sexy = Object.create(cuteNSexy);
+	sexy.init();
+
+	function success(package) {
+		var received = sexy.buffer.rp;
+	};
+
+	function fail(err) {
+		console.log('error received:\n'+err);
+	};
+
+	$(document).ready(function() {
+		console.log('starting the login procedure...');
+		sexy.run('UserLogin', {'userName': 'demo', 'pass': 'demo'}, success, fail);
+	});
+</script>
+</body>
+</html>
